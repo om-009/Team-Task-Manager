@@ -18,7 +18,7 @@ function init() {
         initHome();
     } else if (isDashboard) {
         if (!isSetupComplete) {
-            window.location.href = 'home.html';
+            window.location.href = 'index.html';
             return;
         }
         initDashboard();
@@ -96,7 +96,7 @@ function saveState() {
 }
 
 // -----------------------------------------
-// DASHBOARD LOGIC (index.html)
+// DASHBOARD LOGIC (dashboard.html)
 // -----------------------------------------
 
 function initDashboard() {
@@ -323,7 +323,7 @@ window.moveTask = function (taskId, newStatus) {
 
 
 // -----------------------------------------
-// HOME PAGE LOGIC (home.html)
+// HOME PAGE LOGIC (index.html)
 // -----------------------------------------
 
 function initHome() {
