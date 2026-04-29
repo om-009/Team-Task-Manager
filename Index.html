@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeamFlow: Collaborative Task Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Main App Layout -->
+    <div id="app-page" class="app-container">
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🌊</span>
+                <h1 id="app-team-name">TeamFlow</h1>
+                <span class="divider">|</span>
+                <span class="subtitle">Collaborative Task Management System</span>
+            </div>
+            <div class="user-selector">
+                <label for="active-user">Active Member:</label>
+                <select id="active-user">
+                    <!-- User options populated by JS -->
+                </select>
+                <a href="home.html" id="manage-team-btn" class="manage-team-btn" style="text-decoration:none;"
+                    title="Manage Team">⚙️ Management</a>
+            </div>
+        </header>
+
+        <main class="board">
+            <div class="columns-container">
+                <!-- To-Do Column -->
+                <div class="column">
+                    <div class="column-header">
+                        <h2>To-Do</h2>
+                        <button class="add-task-btn" id="add-task-btn">+ Add Task</button>
+                    </div>
+                    <div class="task-list" id="todo-list" data-status="todo">
+                        <!-- Tasks will be injected here -->
+                    </div>
+                </div>
+
+                <!-- In-Progress Column -->
+                <div class="column">
+                    <div class="column-header">
+                        <h2>In-Progress</h2>
+                    </div>
+                    <div class="task-list" id="inprogress-list" data-status="in-progress">
+                        <!-- Tasks will be injected here -->
+                    </div>
+                </div>
+
+                <!-- Completed Column -->
+                <div class="column">
+                    <div class="column-header">
+                        <h2>Completed</h2>
+                    </div>
+                    <div class="task-list" id="completed-list" data-status="completed">
+                        <!-- Tasks will be injected here -->
+                    </div>
+                </div>
+            </div>
+
+            <aside class="leaderboard">
+                <h2>Contribution Score</h2>
+                <ul id="leaderboard-list">
+                    <!-- Leaderboard populated by JS -->
+                </ul>
+            </aside>
+        </main>
+    </div>
+
+    <!-- Add Task Modal -->
+    <div class="modal-overlay" id="task-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Add New Task</h2>
+                <button class="close-btn" id="close-modal">&times;</button>
+            </div>
+            <form id="add-task-form">
+                <div class="form-group">
+                    <label for="task-title">Task Title</label>
+                    <input type="text" id="task-title" required placeholder="e.g. Design Wireframes">
+                </div>
+                <div class="form-group">
+                    <label for="task-desc">Description</label>
+                    <textarea id="task-desc" required placeholder="Describe the task..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="task-assignee">Assign To</label>
+                    <select id="task-assignee" required>
+                        <!-- Users populated by JS -->
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" id="cancel-task">Cancel</button>
+                    <button type="submit" class="btn-primary">Create Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

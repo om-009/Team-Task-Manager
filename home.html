@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeamFlow Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="home-page" class="setup-container">
+        <div class="setup-card">
+            <div class="logo setup-logo">
+                <span class="logo-icon">🌊</span>
+                <h1>TeamFlow Workspace</h1>
+            </div>
+            <p class="setup-subtitle">Manage your team workspace and members.</p>
+
+            <form id="team-name-form" style="margin-bottom: 2rem;">
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label for="home-team-name">Workspace Name</label>
+                    <div class="add-member-inline">
+                        <input type="text" id="home-team-name" required placeholder="e.g. Engineering Pod">
+                        <button type="submit" id="save-team-name-btn" class="btn-secondary">Save</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="form-group">
+                <label>Team Members</label>
+                <div class="team-list-container" style="max-height: 250px; margin-bottom: 1rem;">
+                    <ul id="home-team-list" class="team-list">
+                        <!-- Members populated here by JS -->
+                    </ul>
+                </div>
+
+                <form id="home-add-member-form" class="add-member-inline">
+                    <input type="text" id="home-new-member" required placeholder="New Member Name...">
+                    <button type="submit" class="btn-secondary">Add Member</button>
+                </form>
+            </div>
+
+            <div class="setup-actions" style="margin-top: 2.5rem;">
+                <a href="index.html" id="go-to-dashboard-btn" class="btn-primary btn-large"
+                    style="text-align: center; text-decoration: none; display: block; width: 100%;">Open Dashboard
+                    &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
